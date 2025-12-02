@@ -1,6 +1,5 @@
 //const {test,expect} = require('@playwright/test')  //or
 import {test,expect} from '@playwright/test'
-import { execPath } from 'process';
 
 test('Locators',async ({page})=>{
 
