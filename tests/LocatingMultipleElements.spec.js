@@ -6,7 +6,7 @@ test('LocatingMultipleElements',async({page})=>{
     
     //Capturing all links
     /*
-    const links = await page.$$('a')   // $$ is used to locate multiple elements
+    const links = await page.$$('a')   // $$ is used to locate multiple elements. Can use locator() also to locate multiple elements
 
     for(const link of links)
     {
@@ -18,7 +18,7 @@ test('LocatingMultipleElements',async({page})=>{
     // Locate all the products displayed on the home page
 
     await page.waitForSelector("//div[@id='tbodyid']//div//h4/a")
-    const products = await page.$$("//div[@id='tbodyid']//div//h4/a") // $$ is used to locate multiple elements
+    const products = await page.$$("//div[@id='tbodyid']//div//h4/a") // $$ is used to locate multiple elements. Can use locator() also to locate multiple elements
 
     for(const product of products)
     {
