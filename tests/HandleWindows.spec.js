@@ -35,10 +35,10 @@ test.only('Handle Multiple Pages/Windows', async()=>{  // Here we are not using 
 
     await page1.locator("//a[normalize-space()='OrangeHRM, Inc']").click() // This line opens the second page/tab in the browser
 
-    const newPage = await pagePromise
+    const newPage = await pagePromise // Storing the event in a variable
     await expect(newPage).toHaveTitle('Human Resources Management Software | HRMS | OrangeHRM') 
 
-    await page1.waitForTimeout(3000) // Use 'page1' for interacting with first page/tab
+    await page1.waitForTimeout(3000) // Use 'page1' for interacting with the first page/tab
     await newPage.waitForTimeout(3000) // Use 'newPage' for interacting with the second page/tab
 
     await browser.close() // Closing bcoz we created our own 'page'. Not used 'page' fixture
