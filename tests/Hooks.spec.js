@@ -1,5 +1,6 @@
 // In playwright.config.js changing fullyParallel to 'false' from 'true'
 // By default it will be 'true'. Changing it to 'false' for executing Hooks.spec.js
+// In playwright.config.js the value of 'workers: process.env.CI' is '1' by default
 
 
 // const {test,expect} = require('@playwright/test') //or

@@ -21,7 +21,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,   // Only one worker i.e. Chrome
+  workers: process.env.CI ? 1 : undefined,   // Only one worker by default. Did not change anything manually
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -30,9 +30,18 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    screenshot: 'on'  // Screenshot will be taken in each step in any spec file and this screenshot will be part of the report
-  },
+
+    trace: 'retain-on-failure', // If 'on' tracing will happen and a tracing.zip file will be generated under test-results folder. And this trace will be part of the report
+                               // We have options like 'on', 'off', 'on-all-retries, 'on-first-retry', 'retain-on-failure', 'retain-on-first-failure', 'retry-with-trace'
+    
+    screenshot: 'only-on-failure',  // If 'on' screenshot will be taken in each step in any spec file irrespective of the test status like pass/fail/skip etc. And this screenshot will be part of the report
+                                    // We have four options like 'on', 'off', 'on-first-failure', 'only-on-failure'
+    
+    video:'retain-on-failure', // If 'on' video will be taken in each step in any spec file irrespective of the test status like pass/fail/skip etc. And this video will be part of the report
+                                  // We have options like 'on', 'off', 'on-first-retry', 'retain-on-failure', 'retry-with-video'                              
+    },
+
+  // timeout: 30000,  // The default timeout is 30 seconds. Can change if required 
 
   /* Configure projects for major browsers */
   projects: [

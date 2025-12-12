@@ -1,6 +1,5 @@
-// In playwright.config.js added 'screenshot' parameter and given value as 'on' under 'use' section to take screenshot in each step for any spec file and this screenshot will be part of the report
-// If automatic screenshot is not required in each step just mark 'screenshot' parameter as 'off' or explore other options as per necessity for 'screenshot' parameter in playwright.config.js
-// And if screenshot is required whenever needed use the screenshot() in the code level
+// In playwright.config.js added 'video' parameter and given value as 'on' under 'use' section to take video of each step for any spec file and this video will be part of the report
+// If video is not required in each step just mark 'video' parameter as 'off' or explore other options as per necessity for 'video' parameter in playwright.config.js
 // Results will be available under 'test-results' folder
 // This configuration in playwright.config.js is applicable for all the spec files
 
@@ -12,4 +11,5 @@ test('Test', async ({ page }) => {
     await page.locator('#loginusername').fill('kishore@1234')
     await page.locator('#loginpassword').fill('password@1234')
     await page.getByRole('button',{name:'Log in'}).click()
+    await expect(page.locator('#logout2')).toBeVisible()
 })
