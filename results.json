@@ -1,0 +1,272 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\playwright.config.js",
+    "rootDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "allure-results"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/kravikumar/OneDrive - ENDAVA/Documents/Playwright_Automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "RetryTest.spec.js",
+      "file": "RetryTest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "POM Test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15672,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js:24:26",
+                    "location": {
+                      "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                      "column": 26,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m status \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                        "column": 26,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m status \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m\n\u001b[2m    at C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js:24:26\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Nexus 6\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-15T13:44:36.082Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                    "column": 26,
+                    "line": 24
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15094,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js:24:26",
+                    "location": {
+                      "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                      "column": 26,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m status \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                        "column": 26,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m status \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m })\u001b[0m\n\u001b[2m    at C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js:24:26\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Nexus 6\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-12-15T13:44:55.461Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\test-results\\RetryTest-POM-Test-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\kravikumar\\OneDrive - ENDAVA\\Documents\\Playwright_Automation\\tests\\RetryTest.spec.js",
+                    "column": 26,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2c48ef0e88569fb8b334-d22332b801f8fca70d3d",
+          "file": "RetryTest.spec.js",
+          "line": 6,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-15T13:44:34.512Z",
+    "duration": 37880.066,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

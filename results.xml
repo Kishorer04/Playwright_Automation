@@ -1,0 +1,95 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="37.880066">
+<testsuite name="RetryTest.spec.js" timestamp="2025-12-15T13:44:34.588Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.766" errors="0">
+<testcase name="POM Test" classname="RetryTest.spec.js" time="30.766">
+<failure message="RetryTest.spec.js:6:5 POM Test" type="FAILURE">
+<![CDATA[  [chromium] › RetryTest.spec.js:6:5 › POM Test ────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      22 |     await page.waitForTimeout(3000)
+      23 |     const status = await cart.checkProductInCart('Nexus 6')
+    > 24 |     expect(await status).toBe(false)
+         |                          ^
+      25 |
+      26 | })
+        at C:\Users\kravikumar\OneDrive - ENDAVA\Documents\Playwright_Automation\tests\RetryTest.spec.js:24:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\RetryTest-POM-Test-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\RetryTest-POM-Test-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      22 |     await page.waitForTimeout(3000)
+      23 |     const status = await cart.checkProductInCart('Nexus 6')
+    > 24 |     expect(await status).toBe(false)
+         |                          ^
+      25 |
+      26 | })
+        at C:\Users\kravikumar\OneDrive - ENDAVA\Documents\Playwright_Automation\tests\RetryTest.spec.js:24:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\RetryTest-POM-Test-chromium-retry1\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-POM-Test-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\RetryTest-POM-Test-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[Nexus 6
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium\trace.zip]]
+Nexus 6
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium-retry1\error-context.md]]
+
+[[ATTACHMENT|test-results\RetryTest-POM-Test-chromium-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

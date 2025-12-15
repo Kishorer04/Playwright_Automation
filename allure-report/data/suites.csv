@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","978","Test 3","chromium","2025-12-15","failed","2025-12-15","","Reporters.spec.js","",""
+"","1128","Test 2","chromium","2025-12-15","failed","2025-12-15","","Reporters.spec.js","",""
+"","3323","Test 1","chromium","2025-12-15","passed","2025-12-15","","Reporters.spec.js","",""
