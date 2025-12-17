@@ -24,6 +24,7 @@ test('Handle Select Tag Dropdown',async ({page})=>{
                                                     
     console.log('Number of options: ',options1.length)
     await expect(options1.length).toBe(10)
+    console.log('Check')
 
     //3. Check presence of value in the dropdown - Approach 1
     let content = await page.locator('#country').textContent() // textContent() will return all the options in String format
